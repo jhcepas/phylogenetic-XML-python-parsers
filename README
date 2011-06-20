@@ -19,22 +19,25 @@ license or restriction.
 
 HOW TO USE THE PARSERS
 
-Parsers can be used as Python modules. A root class named as the
-phylogenetic format (i.e. Phyloxml, Nexml) can be found in the
-corresponding module. A "build" method is present in the main class,
-that allows to read XML data and convert the into Python objects.
-Note that each XML element will be represented by a Python class, so
-you can even create datasets from scratch in a programmatic way.
+Parsers can be used as Python modules. A parse function is included in
+each module which allows loading XML data. All elements will be
+converted into Python objects (each element has its own class) and
+hierarchically connected.
+
+  from phyloxml import parse
+  my_phyloxml_project = parse("phylo.XML")
+
+The opposite direction, creating python
+objects representing XML data, is also possible. Thus, XML datasets
+can be programmaticaly created and exported.
+
+  from phyloxml import Phyloxml
+  my_empty_project = Phyloxml()
+  ...
+  ...
+  my_empty_project.export(output=sys.stdout, level=0)
 
 As an example, the ETE toolkit integrates several of these parses to
 provide tree analysis, manipulation and visualization and features
 directly from XML files.
-
-
-
-
-
-
-
-
 
