@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- 
 
 #
-# Generated Mon Jun 20 17:09:41 2011 by generateDS.py version 2.5a.
+# Generated Mon Jun 20 17:51:26 2011 by generateDS.py version 2.5a.
 #
 
 import sys
@@ -1870,7 +1870,7 @@ def parse(inFileName):
     doc = None
 ##     sys.stdout.write('<?xml version="1.0" ?>\n')
 ##     rootObj.export(sys.stdout, 0, name_=rootTag, 
-##         namespacedef_='')
+##         namespacedef_='xmlns:ortho="http://orthoXML.org/2011/"')
     return rootObj
 
 
@@ -1888,7 +1888,7 @@ def parseString(inString):
     doc = None
 ##     sys.stdout.write('<?xml version="1.0" ?>\n')
 ##     rootObj.export(sys.stdout, 0, name_="orthoXML",
-##         namespacedef_='')
+##         namespacedef_='xmlns:ortho="http://orthoXML.org/2011/"')
     return rootObj
 
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- 
 
 #
-# Generated Mon Jun 20 17:09:46 2011 by generateDS.py version 2.5a.
+# Generated Mon Jun 20 17:51:26 2011 by generateDS.py version 2.5a.
 #
 
 import sys
@@ -1634,7 +1634,7 @@ class MolSeq(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='MolSeq')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
+            outfile.write(self.valueOf_.encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -1644,7 +1644,6 @@ class MolSeq(GeneratedsSuper):
             already_processed.append('is_aligned')
             outfile.write(' is_aligned="%s"' % self.gds_format_boolean(self.gds_str_lower(str(self.is_aligned)), input_name='is_aligned'))
     def exportChildren(self, outfile, level, namespace_='phy:', name_='MolSeq', fromsubclass_=False):
-        super(MolSeq, self).exportChildren(outfile, level, namespace_, name_, True)
         pass
     def hasContent_(self):
         if (
@@ -1714,7 +1713,7 @@ class Accession(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='Accession')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
+            outfile.write(self.valueOf_.encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -1891,7 +1890,7 @@ class ProteinDomain(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='ProteinDomain')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
+            outfile.write(self.valueOf_.encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -2860,7 +2859,7 @@ class Uri(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='Uri')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
+            outfile.write(self.valueOf_.encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -2946,7 +2945,7 @@ class Confidence(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='Confidence')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
+            outfile.write(self.valueOf_.encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -3019,7 +3018,7 @@ class Id(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='Id')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
+            outfile.write(self.valueOf_.encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -3926,7 +3925,7 @@ def parse(inFileName):
     doc = None
 ##     sys.stdout.write('<?xml version="1.0" ?>\n')
 ##     rootObj.export(sys.stdout, 0, name_=rootTag, 
-##         namespacedef_='')
+##         namespacedef_='xmlns:phy="http://www.phyloxml.org/1.10/phyloxml.xsd"')
     return rootObj
 
 
@@ -3944,7 +3943,7 @@ def parseString(inString):
     doc = None
 ##     sys.stdout.write('<?xml version="1.0" ?>\n')
 ##     rootObj.export(sys.stdout, 0, name_="phyloxml",
-##         namespacedef_='')
+##         namespacedef_='xmlns:phy="http://www.phyloxml.org/1.10/phyloxml.xsd"')
     return rootObj
 
 
