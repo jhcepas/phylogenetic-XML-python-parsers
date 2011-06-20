@@ -32,12 +32,12 @@ objects representing XML data, is also possible. Thus, XML datasets
 can be programmaticaly created and exported.
 
   from phyloxml import Phyloxml
-  my_empty_project = Phyloxml()
+  my_project = Phyloxml()
   ...
   ...
-  my_empty_project.export(output=sys.stdout, level=0)
+  my_project.export(output=sys.stdout, level=0)
 
 As an example, the ETE toolkit integrates several of these parses to
-provide tree analysis, manipulation and visualization and features
-directly from XML files.
+provide tree analysis, manipulation and visualization features
+directly on XML datasets.
 
