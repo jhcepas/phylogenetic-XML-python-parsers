@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- 
 
 #
-# Generated Mon Jun 20 17:51:26 2011 by generateDS.py version 2.5a.
+# Generated Wed Jun 22 15:46:56 2011 by generateDS.py version 2.5a.
 #
 
 import sys
@@ -168,7 +168,7 @@ except ImportError, exp:
 # Globals
 #
 
-ExternalEncoding = 'ascii'
+ExternalEncoding = 'utf-8'
 Tag_pattern_ = re_.compile(r'({.*})?(.*)')
 STRING_CLEANUP_PAT = re_.compile(r"[\n\r\s]+")
 
@@ -1634,7 +1634,7 @@ class MolSeq(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='MolSeq')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(self.valueOf_.encode(ExternalEncoding))
+            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -1713,7 +1713,7 @@ class Accession(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='Accession')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(self.valueOf_.encode(ExternalEncoding))
+            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -1890,7 +1890,7 @@ class ProteinDomain(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='ProteinDomain')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(self.valueOf_.encode(ExternalEncoding))
+            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -2859,7 +2859,7 @@ class Uri(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='Uri')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(self.valueOf_.encode(ExternalEncoding))
+            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -2945,7 +2945,7 @@ class Confidence(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='Confidence')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(self.valueOf_.encode(ExternalEncoding))
+            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:
@@ -3018,7 +3018,7 @@ class Id(GeneratedsSuper):
         self.exportAttributes(outfile, level, [], namespace_, name_='Id')
         if self.hasContent_():
             outfile.write('>')
-            outfile.write(self.valueOf_.encode(ExternalEncoding))
+            outfile.write(str(self.valueOf_).encode(ExternalEncoding))
             self.exportChildren(outfile, level + 1, namespace_, name_)
             outfile.write('</%s%s>\n' % (namespace_, name_))
         else:

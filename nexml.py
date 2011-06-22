@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- 
 
 #
-# Generated Mon Jun 20 17:51:27 2011 by generateDS.py version 2.5a.
+# Generated Wed Jun 22 15:46:57 2011 by generateDS.py version 2.5a.
 #
 
 import sys
@@ -168,7 +168,7 @@ except ImportError, exp:
 # Globals
 #
 
-ExternalEncoding = 'ascii'
+ExternalEncoding = 'utf-8'
 Tag_pattern_ = re_.compile(r'({.*})?(.*)')
 STRING_CLEANUP_PAT = re_.compile(r"[\n\r\s]+")
 
