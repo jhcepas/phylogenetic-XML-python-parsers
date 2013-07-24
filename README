@@ -12,10 +12,14 @@ bases for input/output XML support to any Python application or
 toolkit. They facilitate also the exchange of annotated phylogenetic
 datasets among different tools.
 
+These three parsers are also part of the ETE toolkit package
+(http://ete.cgenomics.org), where they are integrated and provide a
+more convenient integration with tree data structures.
+
 LICENSE AND DISTRIBUTION 
 
 Since the code of parsers is auto-generated, they are free of any
-license or restriction.
+license or restriction. 
 
 HOW TO USE THE PARSERS
 
