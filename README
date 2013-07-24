@@ -13,8 +13,8 @@ toolkit. They facilitate also the exchange of annotated phylogenetic
 datasets among different tools.
 
 These three parsers are also part of the ETE toolkit package
-(http://ete.cgenomics.org), where they are integrated and provide a
-more convenient integration with tree data structures.
+(http://ete.cgenomics.org), where they provide a more convenient
+integration with tree data structures.
 
 LICENSE AND DISTRIBUTION 
 
